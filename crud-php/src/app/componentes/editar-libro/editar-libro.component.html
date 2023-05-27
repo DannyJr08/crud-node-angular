@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-header">
+        Editar Libro
+    </div>
+    <div class="card-body">
+        <form [formGroup]="formularioDeLibros" (ngSubmit)="enviarDatos()">
+            <div class="mb-3">
+            <label for="" class="form-label">Título</label>
+            <input formControlName="titulo" type="text"
+                class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingresa el título del libro">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Autor</label>
+                <input formControlName="autor" type="text"
+                    class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingresa el autor del libro">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Año</label>
+                <input formControlName="anio" type="text"
+                    class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingresa el año del libro">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Editorial</label>
+                <input formControlName="editorial" type="text"
+                    class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingresa la editorial del libro">
+            </div>
+            <div class="btn-group" role="group" aria-label="Button group name">
+                <button type="submit" class="btn btn-success">Modificar Registro</button>
+                <button type="button" class="btn btn-danger ms-3" routerLink="/listar-libro">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>

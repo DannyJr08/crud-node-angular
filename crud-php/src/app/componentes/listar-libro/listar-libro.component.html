@@ -1,0 +1,35 @@
+<div class="card">
+    <div class="card-header">
+        Lista de Libros en Existencia
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">ISBN</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Año</th>
+                        <th scope="col">Editorial</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let li of Libros; let iControl=index">
+                        <td scope="row">{{li.isbn}}</td>
+                        <td>{{li.titulo}}</td>
+                        <td>{{li.autor}}</td>
+                        <td>{{li.anio}}</td>
+                        <td>{{li.editorial}}</td>
+                        <td>
+                            <a href="" class="btn btn-info" routerLink="/editar-libro/{{li.isbn}}">Editar</a>  |   
+                            <a (click)="borrarRegistro(li.icontrol, li.isbn)" href="" class="btn btn-danger">Borrar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>

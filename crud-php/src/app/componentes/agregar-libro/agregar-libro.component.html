@@ -1,0 +1,42 @@
+<!-- bs5-card-head-foot -->
+<div class="card">
+    <div class="card-header">
+        Agregar Libro
+    </div>
+    <div class="card-body">
+        <!-- bs5-form-input -->
+        <form (ngSubmit)="enviarDatos()" [formGroup]="formularioDeLibros">
+            <div class="mb-3">
+                <label for="" class="form-label">ISBN</label>
+                <input formControlName="isbn" type="text"
+                    class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingresa el isbn">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Titulo</label>
+                <input formControlName="titulo" type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                    placeholder="Ingresa el titulo del libro">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Autor</label>
+                <input formControlName="autor" type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                    placeholder="Ingresa el autor del libro">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Año</label>
+                <input formControlName="anio" type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                    placeholder="Ingresa el año del libro">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Editorial</label>
+                <input formControlName="editorial" type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                    placeholder="Ingresa la editorial del libro">
+            </div>
+            <!-- bs5-bgroup-default -->
+            <div class="btn-group" role="group" aria-label="Button group name">
+                <button type="submit" class="btn btn-success">Agregar</button>
+                <button type="button" class="btn btn-danger ms-3" routerLink="/listar-libro">Cancelar</button>
+
+            </div>
+        </form>
+    </div>
+</div>
